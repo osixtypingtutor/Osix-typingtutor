@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Osix — Home</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+  <div class="app">
+    <aside class="sidebar glass">
+      <div class="side-top">
+        <div class="side-avatar"><img id="sideAvatarImg" src="" alt="avatar"/></div>
+        <div><div id="sideName" class="side-name">Student</div><div class="small">Welcome</div></div>
+      </div>
+      <nav class="side-menu">
+        <button class="side-btn active" data-page="home">Home</button>
+        <button class="side-btn" data-page="learn">Learning Typing</button>
+        <button class="side-btn" data-page="choose">Choose Test</button>
+        <button class="side-btn" data-page="daily">Daily live typing</button>
+        <button class="side-btn" data-page="leader">Live Leader Board</button>
+        <button class="side-btn" data-page="results">My results</button>
+        <button class="side-btn" data-page="logout">Logout</button>
+      </nav>
+      <div class="side-bottom">
+        <svg width="36" height="36" viewBox="0 0 100 100"><circle cx="50" cy="30" r="12" fill="#6ea8fe"/></svg>
+        <div class="tag">Made in India</div>
+      </div>
+    </aside>
+
+    <div class="main-col">
+      <header class="topbar glass">
+        <div class="top-left">
+          <div class="top-avatar"><img id="topAvatar" src="" alt="avatar"/></div>
+          <div id="topUserName" class="top-username">Student Name</div>
+        </div>
+        <div class="righttop">
+          <img id="brandLogoSmall" class="brand-small" src="" alt="OSIX"/>
+        </div>
+      </header>
+
+      <div class="content page">
+        <!-- HOME section -->
+        <section id="pageHome" class="page">
+          <h2>Search Typing Exams</h2>
+          <input id="searchExam" class="input" placeholder="Search typing exams..." oninput="renderTestsList()"/>
+          <div class="chips">
+            <button class="chip">CGL</button>
+            <button class="chip">CHSL</button>
+            <button class="chip">DELHI POLICE HCM</button>
+            <button class="chip">UPSSSC</button>
+          </div>
+
+          <h3>Available Tests</h3>
+          <div id="testsList" class="tests-grid"></div>
+
+          <div class="promo">
+            <div>
+              <h4>Free speed booster course</h4>
+              <p class="small">Based on previous year patterns.</p>
+            </div>
+            <div>
+              <p>Buy 10 tests — just ₹99</p>
+              <button class="btn primary">Buy</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Choose placeholder (choose opens choose.html) -->
+        <section id="pageChoose" class="page hidden"><h2>Choose Test (use sidebar)</h2></section>
+
+        <!-- Leaderboard -->
+        <section id="pageLeader" class="page hidden">
+          <h2>Live Leader Board</h2>
+          <div id="leaderboardList"></div>
+        </section>
+
+        <!-- My Results -->
+        <section id="pageResults" class="page hidden">
+          <h2>My Results</h2>
+          <div id="myResultsList"></div>
+        </section>
+
+        <!-- Learn Typing -->
+        <section id="pageLearn" class="page hidden">
+          <h2>Learn Typing</h2>
+          <p class="small">Short lessons & drills (placeholder)</p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+<script src="script.js"></script>
+<script>initHomePage();</script>
+</body>
+</html>
